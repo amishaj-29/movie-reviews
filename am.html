@@ -103,12 +103,13 @@
 			
 		$(this).click(function(){
 		   
-		var records = $('table').find('tbody > tr');
+            var records = $('table').find('tbody > tr');
 		records.sort(function (a,b){
 				var value1 = $(a).children('td').eq(column).text();
 				var value2 = $(b).children('td').eq(column).text(); 
 			return (value1 < value2) ? -1 : (value1 > value2 ? 1 : 0)
 		    });
+
 		$.each(records, function(index,row){
 			$('tbody').append(row);
 	    
